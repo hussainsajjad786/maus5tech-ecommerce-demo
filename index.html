@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Northstar Supply — responsive demo storefront for everyday essentials.">
+  <title>Northstar Supply | Everyday Essentials</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">FREE SHIPPING ON ORDERS OVER Rs. 5,000</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Northstar Supply home">NORTHSTAR<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#shop">Shop</a><a href="#story">Our Story</a><a href="#newsletter">Newsletter</a>
+    </nav>
+    <button class="cart-button" id="open-cart" aria-label="Open shopping cart">Bag <span id="cart-count">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">DESIGNED FOR EVERYDAY</p>
+        <h1>Good things.<br><em>Better living.</em></h1>
+        <p class="hero-text">Thoughtful essentials for your workspace, your weekends, and everything in between.</p>
+        <a class="button button-dark" href="#shop">Explore collection <span>↗</span></a>
+        <div class="hero-note"><span class="dot"></span> New season collection — 2026</div>
+      </div>
+      <div class="hero-art" role="img" aria-label="Stylized product display with bag, bottle and notebook">
+        <div class="sun"></div><div class="art-card card-back"></div><div class="art-card card-front"></div>
+        <div class="product-bottle"><div class="bottle-cap"></div><div class="bottle-mark">N.</div></div>
+        <div class="notebook"><span>NORTHSTAR<br>FIELD NOTES</span></div>
+        <div class="art-caption">LESS, BUT<br>THOUGHTFUL.</div>
+      </div>
+    </section>
+
+    <section class="trust-row">
+      <div><strong>01</strong><span>Thoughtful design</span></div>
+      <div><strong>02</strong><span>Everyday quality</span></div>
+      <div><strong>03</strong><span>Made to last</span></div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE COLLECTION</p><h2>Everyday favourites</h2></div>
+        <p>Useful objects. Considered details.<br>Made to fit your everyday.</p>
+      </div>
+      <div class="shop-controls">
+        <label class="search-wrap"><span>⌕</span><input id="search" type="search" placeholder="Search products..." aria-label="Search products"></label>
+        <select id="sort" aria-label="Sort products"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select>
+      </div>
+      <div class="product-grid" id="product-grid"></div>
+    </section>
+
+    <section class="story-section" id="story">
+      <div class="story-visual"><div class="story-circle">MAKE<br>ROOM FOR<br><em>GOOD.</em></div></div>
+      <div class="story-copy"><p class="eyebrow">OUR PHILOSOPHY</p><h2>Buy fewer things.<br><em>Choose them well.</em></h2><p>Northstar is a fictional demo brand built to demonstrate a clean, conversion-focused storefront experience: clear product information, simple navigation, responsive layouts and a friction-light shopping journey.</p><a class="text-link" href="#shop">Shop the collection <span>→</span></a></div>
+    </section>
+
+    <section class="newsletter" id="newsletter">
+      <div><p class="eyebrow">THE NORTHSTAR NOTE</p><h2>A little good in your inbox.</h2><p>Product notes, useful ideas, and first access to new drops.</p></div>
+      <form id="newsletter-form"><label for="email" class="sr-only">Email address</label><input id="email" type="email" placeholder="Your email address" required><button class="button button-light" type="submit">Sign me up ↗</button></form>
+      <p class="form-message" id="newsletter-message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#">NORTHSTAR<span>.</span></a><p>Demo storefront concept · No real orders or payments are processed.</p><a href="#top">Back to top ↑</a></footer>
+
+  <div class="cart-overlay" id="cart-overlay" hidden>
+    <button class="overlay-backdrop" id="close-cart" aria-label="Close cart"></button>
+    <aside class="cart-drawer" aria-label="Shopping cart" aria-modal="true" role="dialog">
+      <div class="cart-head"><h2>Your bag <span id="drawer-count">(0)</span></h2><button id="close-cart-x" aria-label="Close cart">×</button></div>
+      <div id="cart-items" class="cart-items"><p class="empty-cart">Your bag is waiting for something good.</p></div>
+      <div class="cart-bottom"><div class="cart-total"><span>Subtotal</span><strong id="cart-total">Rs. 0</strong></div><button id="checkout" class="button button-dark full">Continue to checkout</button><p class="demo-note">Demo only — checkout and payment are not connected.</p></div>
+    </aside>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
